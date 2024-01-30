@@ -17,6 +17,6 @@
     </div>
 
     @empty
-
+        <h2>No hay eventos próximos</h2>
     @endforelse
 @endsection

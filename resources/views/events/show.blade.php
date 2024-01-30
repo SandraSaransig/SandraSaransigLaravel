@@ -5,7 +5,7 @@
     <h2 class="title">Información: {{$event->name}}</h2>
     <div>
         Descripcion:
-        {{$event->descriptin}}
+        {{$event->description}}
         <br>
         Location: {{$event->location}}
         <br>
@@ -23,12 +23,17 @@
     </div>
 
 @endsection
+
 @section('segment')
-<a href="{{route('events.edit', $event->slug)}}">Editar evento</a>
-<br>
+{{-- Ruta editar evento --}}
+<a href="{{route('events.edit', ['event'=>$event->slug])}}">Editar evento</a>
+<br><br>
+
+{{-- Eliminar evento --}}
 <form action="{{route('events.destroy',['event'=>$event->slug])}}" method="post">
 @csrf
 @method('delete')
 <input type="submit" value="Eliminar Evento">
 </form>
+
 @endsection

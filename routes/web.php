@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FooterInfoController;
 use App\Http\Controllers\EventController;
-
+use App\Http\Controllers\PlayerController;
 //Añadir para la solicitud HTTP y las redirecciones HTTP
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -38,9 +38,15 @@ Route::get('footerInfo/terms', [FooterInfoController::class, 'terms'])->name('fo
 
 
 //Rutas de Eventos
-//Ruta Evento
 Route::resource('events', EventController::class)
 ->parameters(['event'=>'slug'])
 ->missing(function(Request $request){
     return Redirect::route('events.index');
+});
+
+//Ruta de Jugadores
+Route::resource('players', PlayerController::class)
+->parameters(['player'=>'slug'])
+->missing(function (Request $request){
+    return Redirect::route('players.index');
 });
