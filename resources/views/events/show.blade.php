@@ -26,7 +26,7 @@
 @section('segment')
 <a href="{{route('events.edit', $event->slug)}}">Editar evento</a>
 <br>
-<form action="{{route('events.destroy',['event'=>$event->id])}}" action="post">
+<form action="{{route('events.destroy',['event'=>$event->slug])}}" method="post">
 @csrf
 @method('delete')
 <input type="submit" value="Eliminar Evento">

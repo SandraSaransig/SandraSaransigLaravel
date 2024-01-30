@@ -44,7 +44,7 @@ class EventController extends Controller
         $event->hour = $request->get('hour');
         $event->type = $request->get('type');
         $event->tags = $request->get('tags');
-        $event->visible = $request->get('visible') ? 1 : 0;
+        $event->visible = $request->has('visible') ? 1 : 0;
         $event->save();
 
         return view('events.stored', compact('event'));
@@ -71,7 +71,7 @@ class EventController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(EventRequest $request, Event $event)
+    public function update(Request $request, Event $event)
     {
         //
         $event->name = $request->get('name');
@@ -82,7 +82,7 @@ class EventController extends Controller
         $event->hour = $request->get('hour');
         $event->type = $request->get('type');
         $event->tags = $request->get('tags');
-        $event->visible = $request->get('visible') ? 1 : 0;
+        $event->visible = $request->has('visible') ? 1 : 0;
         $event->save();
 
         return view('events.edited', compact('event'));
@@ -95,7 +95,8 @@ class EventController extends Controller
     public function destroy(Event $event)
     {
         //
-        Event::findOrFail($event)->delete();
+        // Event::findOrFail($event)->delete();
+        $event->delete();
         return redirect()->route('events.index');
     }
 }
