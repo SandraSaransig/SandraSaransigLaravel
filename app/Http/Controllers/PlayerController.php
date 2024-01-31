@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Player;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PlayerController extends Controller
 {
@@ -24,6 +25,7 @@ class PlayerController extends Controller
     public function create()
     {
         //
+        return view('players.create');
     }
 
     /**
@@ -32,6 +34,19 @@ class PlayerController extends Controller
     public function store(Request $request)
     {
         //
+        $player = new Player();
+        $player->name = $request->get('name');
+        $player->slug = Str::slug($player->name);
+        $player->twitter = $request->get('twitter');
+        $player->instagram = $request->get('instagram');
+        $player->twitch = $request->get('twitch');
+        $player->tshirt_number = $request->get('tshirt_number');
+        $player->position = $request->get('position');
+        $player->visible = $request->has('visible') ? 1 : 0;
+        $player->save();
+
+        return view('players.stored', compact('player'));
+
     }
 
     /**
