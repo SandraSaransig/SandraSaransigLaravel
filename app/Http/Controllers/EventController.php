@@ -6,6 +6,7 @@ use App\Models\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Http\Requests\EventRequest;
+use App\Http\Requests\EditEventRequest;
 
 
 class EventController extends Controller
