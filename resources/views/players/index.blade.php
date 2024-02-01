@@ -2,13 +2,20 @@
 @section('title','Lista de jugadores')
 
 @section('content')´
-Hola
+
     <h2 class="title">Lista jugadores</h2>
     @forelse ($players as $player)
     <div>
         <ul>
             <li>
-                <a href="{{route('players.show', $player->slug)}}">{{$player->name}}</a>
+                <div>
+                    <a href="{{route('players.show', $player->slug)}}">{{$player->name}}</a>
+                    <img src="" alt="Imagen Jugador">
+                </div>
+                <div>
+                    <a href="">Visible</a>
+                    <a href="">Invisible</a>
+                </div>
             </li>
         </ul>
     </div>

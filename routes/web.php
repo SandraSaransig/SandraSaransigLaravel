@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FooterInfoController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\GeneralController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PlayerController;
 //Añadir para la solicitud HTTP y las redirecciones HTTP
 use Illuminate\Http\Request;
@@ -26,7 +28,7 @@ Route::get('/', function () {
 
 
 //Rutas footer
-Route::get('footerInfo/contact', [FooterInfoController::class, 'contact'])->name('footerinfo.contact');
+// Route::get('footerInfo/contact', [FooterInfoController::class, 'contact'])->name('footerinfo.contact');
 
 Route::get('footerInfo/policy', [FooterInfoController::class, 'policy'])->name('footerinfo.policy');
 
@@ -49,4 +51,15 @@ Route::resource('players', PlayerController::class)
 ->parameters(['player'=>'slug'])
 ->missing(function (Request $request){
     return Redirect::route('players.index');
+});
+
+
+//Ruta Donde estamos nav
+Route::get('general/where',[GeneralController::class,'where'])->name('general.where');
+
+//Ruta Mensajes
+Route::source('general', MessageController::class)
+->parameters(['message'=>'slug'])
+->missing(function(Request $request){
+    return Redirect::route('general.message');
 });

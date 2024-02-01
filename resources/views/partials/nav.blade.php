@@ -5,8 +5,8 @@
     <a href="{{route('players.index')}}">Jugadores</a>
     <a href="{{route('events.index')}}">Eventos</a>
     <a href="">Tienda</a>
-    <a href="">Contacto</a>
-    <a href="">Donde estamos</a>
+    <a href="{{route('footerinfo.contact')}}">Contacto</a>
+    <a href="{{route('general.where')}}">Donde estamos</a>
     <a href="{{route('players.create')}}">Añadir Jugador</a>
     <a href="{{route('events.create')}}">Añadir Evento</a>
     <a href="">Mensajes</a>
