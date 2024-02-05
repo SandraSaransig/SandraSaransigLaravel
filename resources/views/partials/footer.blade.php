@@ -1,4 +1,4 @@
-<footer>
+<footer class="footer">
     <h3>Delta Rayo DoradoFC</h3>
     <h3>Desarrollado por Sandra Saransig</h3>
     <div>

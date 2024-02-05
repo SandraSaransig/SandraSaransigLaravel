@@ -1,107 +1,103 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
 
 body{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100v;
-    background: antiquewhite;
+    margin: 0;
+    /* align-items: center; */
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-bottom: 8px;
 }
 
-/*Estilo formulario*/
-.wrapper{
-    width: 420px;
-    background: peru;
-    color: azure;
-    border-radius: 10px;
-    padding: 30px 40px;
-}
-
-.wrapper h2{
-    font-size: 36px;
+h1{
+    margin: 0;
+    font-size: 6rem;
     text-align: center;
-
 }
 
-
-.wrapper .input-box{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 30px 0;
+.storm{
+    background-image: url(images/yellow.gif);
+    background-size: cover;
+    background-position: center;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
-.input-box input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid rgb(255, 255, 255, .2);
-    border-radius: 40px;
-    font-size: 16px;
-    color: azure;
-    padding: 20px 45px 20px 20px;
+.divImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
 }
 
-.input-box input::pl{
-    color: azure;
-
+.imgInicio{
+    margin-top: 10px;
+    max-width: 100%;
+    opacity: 0.7;
 }
 
-.input-box i{
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-}
-
-
-.wrapper .btn{
-    width: 100%;
-    height: 45px;
-    background: azure;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgb(0, 0, 0, .1);
-    cursor: pointer;
-    font-size: 16px;
-    color: black;
-    font-weight: 600;
-}
-
-.wrapper .register-link{
-    font-size: 14.5px;
+/*Estilos footer*/
+.footer{
+    background-color: #333;
+    color: #ffff;
+    padding: 20px;
     text-align: center;
-    margin: 20px 0 15px;
+    margin-top: center;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
 }
 
-.register-link span a{
-    color: azure;
+/* Estilos para los encabezados dentro del footer */
+footer h3 {
+    margin: 10px 0;
+}
+
+/* Estilos para los enlaces dentro del footer */
+footer a {
+    color: #fff;
     text-decoration: none;
-    font-weight: 600;
+    margin: 0 10px;
 }
 
-.register-link span a:hover{
+footer a:hover {
     text-decoration: underline;
 }
 
 
-/*Estilos footer*/
-footer{
-    background-color: black;
-    color: azure;
-    padding: 20px;
+
+/*Estilos nav*/
+nav{
+    background-color: #333;
+    padding: 10px;
     text-align: center;
-    margin-top: auto;
 }
+
+nav a{
+    color: #ffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+.logoNav{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+
+h2{
+    display: inline;
+    color: #ecb730;
+    font-size: 24px;
+}
+
+
+

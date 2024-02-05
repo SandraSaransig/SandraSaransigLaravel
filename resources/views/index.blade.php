@@ -2,7 +2,7 @@
 @section('title', 'Index')
 @section('content')
     <div class="divImg">
-        <img src="{{ asset('images/imgInicio.jpg') }}" alt="imagen de inicio" class="imgInicio">
+        <img src="/images/imgInicio.jpg" alt="imagen de inicio" class="imgInicio">
     </div>
     <h1 class="storm">Bienvenido a Delta Rayo DoradoFC</h1>
 @endsection
@@ -11,6 +11,7 @@
     <span>
         ¡Bienvenido a Delta Rayo DoradoFC!
     </span>
+
     <br>
     <span>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit.
