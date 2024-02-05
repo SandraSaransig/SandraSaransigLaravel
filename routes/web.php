@@ -6,6 +6,8 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PlayerController;
+use App\Http\Controllers\LoginController;
+
 //Añadir para la solicitud HTTP y las redirecciones HTTP
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -28,7 +30,7 @@ Route::get('/', function () {
 
 
 //Rutas footer
-// Route::get('footerInfo/contact', [FooterInfoController::class, 'contact'])->name('footerinfo.contact');
+Route::get('footerInfo/contact', [FooterInfoController::class, 'contact'])->name('footerinfo.contact');
 
 Route::get('footerInfo/policy', [FooterInfoController::class, 'policy'])->name('footerinfo.policy');
 
@@ -58,8 +60,23 @@ Route::resource('players', PlayerController::class)
 Route::get('general/where',[GeneralController::class,'where'])->name('general.where');
 
 //Ruta Mensajes
-Route::source('general', MessageController::class)
-->parameters(['message'=>'slug'])
+ Route::resource('general', MessageController::class)
+ ->parameters(['message'=>'slug'])
 ->missing(function(Request $request){
     return Redirect::route('general.message');
-});
+ });
+
+
+ //Rutas auth, profile
+Route::get('signup',[LoginController::class,'signupForm'])->name('signupForm');
+Route::post('signup',[LoginController::class,'signup'])->name('signup');
+
+Route::get('login',[LoginController::class,'loginForm'])->name('loginForm');
+Route::post('login',[LoginController::class,'login'])->name('login');
+
+Route::get('logout',[LoginController::class,'logout'])->name('logout');
+
+Route::get('show', function(){
+    return view('profile.show');
+})->name('profile.show')
+->middleware('auth');
