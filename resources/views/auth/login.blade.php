@@ -8,12 +8,14 @@
         <h2>Login</h2>
         <div class="input-box">
             <input type="text" placeholder="Nombre de usuario">
+            <box-icon type='solid' name='user'></box-icon>
         </div>
         <div class="input-box">
             <input type="password" placeholder="Contraseña">
+            <box-icon name='lock-alt' type='solid' ></box-icon>
         </div>
 
-        <input type="submit" value="Login">
+        <input type="submit" value="Login" class="btn">
 
         <div class="register-link">
             <span>¿No tienes cuenta?
