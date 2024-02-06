@@ -15,7 +15,7 @@ return new class extends Migration
             //
             $table->string('username')->after('id');
             $table->date('birthday');
-            $table->enum('rol',['user','admin'])
+            $table->enum('rol',['guest','user','admin'])
                 ->default('user')
                 ->after('password');
         });

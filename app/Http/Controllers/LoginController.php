@@ -32,7 +32,7 @@ class LoginController extends Controller
         if(Auth::viaRemember()){
             return 'Bienvenido de nuevo';
         } else if(Auth::check()){
-            return redirect()->route('');
+            return redirect()->route('profile.show');
         } else{
             return view('auth.login');
         }

@@ -13,11 +13,11 @@
 
             <h2 class="login">Login</h2>
             <div class="input-box">
-                <input type="text" placeholder="Nombre de usuario">
+                <input type="text"  name="username" placeholder="Nombre de usuario" value="{{old('username')}}">
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Contraseña">
+                <input type="password" name="password" placeholder="Contraseña">
                 <i class='bx bxs-lock-alt' ></i>
             </div>
 
