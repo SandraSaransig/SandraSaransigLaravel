@@ -13,8 +13,8 @@ class MessageController extends Controller
     public function index()
     {
         //
-        $messages = Message::all();
-        return view('general.message', compact('messages'));
+        $messages = Message::orderBy('created_at','desc')->get();
+        return view('messages.index', compact('messages'));
     }
 
     /**
@@ -32,6 +32,14 @@ class MessageController extends Controller
     public function store(Request $request)
     {
         //
+        $message = new Message();
+        $message->name = $request->get('name');
+        $message->subject = $request->get('subject');
+        $message->text = $request->get('text');
+        $message->save();
+
+        return view('messages.stored', compact('message'));
+
     }
 
     /**
@@ -39,8 +47,11 @@ class MessageController extends Controller
      */
     public function show(Message $message)
     {
-        //
-        return view('general.message', compact('message'));
+        //controlar mensaje leido
+        $message = Message::findOrFail($message->id);
+        $message->readed = true;
+        $message->save();
+        return view('messages.show', compact('message'));
     }
 
     /**

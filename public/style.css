@@ -2,12 +2,11 @@
 body{
     margin: 0;
     /* align-items: center; */
-    background-size: cover;
-    background-position: center;
+
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin-bottom: 8px;
+
 }
 
 h1{
@@ -44,10 +43,10 @@ h1{
     color: #ffff;
     padding: 20px;
     text-align: center;
-    margin-top: center;
-    width: 100%;
-    bottom: 0;
-    position: fixed;
+    margin-top: auto;
+
+
+
 }
 
 /* Estilos para los encabezados dentro del footer */

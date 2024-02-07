@@ -5,7 +5,7 @@
 @section('content')
 <h1 class="title">Contacto</h1>
 {{-- Crear formulario, leer la hooja --}}
-<form action="" method="post">
+<form action="{{route('messages.store')}}" method="post">
     @csrf
 
     <label for="name">Nombre</label>
@@ -32,6 +32,7 @@
     @enderror
     <br>
 
+    <input type="submit" value="Enviar">
 
 
 </form>

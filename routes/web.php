@@ -56,14 +56,16 @@ Route::resource('players', PlayerController::class)
 });
 
 
-//Ruta Donde estamos nav
+//Ruta Donde estamos y Productos del nav
 Route::get('general/where',[GeneralController::class,'where'])->name('general.where');
+Route::get('general/index',[GeneralController::class, 'products'])->name('general.index');
+
 
 //Ruta Mensajes
- Route::resource('general', MessageController::class)
+ Route::resource('messages', MessageController::class)
  ->parameters(['message'=>'slug'])
 ->missing(function(Request $request){
-    return Redirect::route('general.message');
+    return Redirect::route('messages.index');
  });
 
 
@@ -80,3 +82,9 @@ Route::get('show', function(){
     return view('profile.show');
 })->name('profile.show')
 ->middleware('auth');
+
+
+Route::get('edit', function(){
+    return view('profile.edit');
+})->name('profile.edit')
+->middleware(('auth'));
