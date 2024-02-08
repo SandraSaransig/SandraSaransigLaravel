@@ -62,11 +62,7 @@ Route::get('general/where',[GeneralController::class,'where'])->name('general.wh
 
 
 //Ruta Mensajes
- Route::resource('messages', MessageController::class)
- ->parameters(['message'=>'slug'])
-->missing(function(Request $request){
-    return Redirect::route('messages.index');
- });
+ Route::resource('messages', MessageController::class);
 
 
  //Ruta productos

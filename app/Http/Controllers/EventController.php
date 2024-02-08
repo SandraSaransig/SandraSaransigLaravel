@@ -17,7 +17,7 @@ class EventController extends Controller
     public function index()
     {
         //
-        $events = Event::where('visible',1);
+        $events = Event::where('visible',1)->get();
         return view('events.index', compact('events'));
     }
 
@@ -101,4 +101,6 @@ class EventController extends Controller
         $event->delete();
         return redirect()->route('events.index');
     }
+
+    //Crear funcion me gusta
 }

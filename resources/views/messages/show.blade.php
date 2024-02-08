@@ -2,9 +2,14 @@
 @section('title', 'Información mensaje')
 @section('content')
     <h2>Información: </h2>
-    <h3>Mensajes no leidos:</h3>
-    <div>
 
+    <div>
+        {{$message->name}}
+        <br>
+        {{$message->subject}}
+        <br>
+        {{$message->text}}
+        <br>
 
     </div>
 

@@ -2,21 +2,26 @@
 @section('title','Mensajes')
 @section('content')
 <h1>Mensajes</h1>
-@forelse ($messages as $message)
-<div class="mensaje">
-    @forelse ($messages as $message)
-    {{-- <a href="{{route('messages.show', $message->slug)}}">{{$message->name}}</a> --}}
-    @if ($message->readed != true)
-    {{$message->name}}
-    <br>
-    Arreglar mensajes slug
-    @endif
-    @empty
+@forelse ($messages as $menssage)
+    @if ($menssage->readed)
+    {{$menssage->name}}
 
-    @endforelse
+    @endif
+
+<div class="mensaje">
+
+
+
+    <a href="{{route('messages.show', $menssage->id)}}">{{$menssage->name}}</a>
+
+
 </div>
 
 @empty
 
+<p>No hay mensajes.</p>
+
 @endforelse
+
+
 @endsection
