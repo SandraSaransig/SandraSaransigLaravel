@@ -11,7 +11,5 @@ class GeneralController extends Controller
         return view('general.where');
     }
 
-    public function products(){
-        return view('general.index');
-    }
+
 }

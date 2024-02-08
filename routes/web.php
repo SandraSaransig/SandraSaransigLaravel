@@ -7,7 +7,7 @@ use App\Http\Controllers\GeneralController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\LoginController;
-
+use App\Http\Controllers\ProductController;
 //Añadir para la solicitud HTTP y las redirecciones HTTP
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -58,7 +58,7 @@ Route::resource('players', PlayerController::class)
 
 //Ruta Donde estamos y Productos del nav
 Route::get('general/where',[GeneralController::class,'where'])->name('general.where');
-Route::get('general/index',[GeneralController::class, 'products'])->name('general.index');
+
 
 
 //Ruta Mensajes
@@ -67,6 +67,10 @@ Route::get('general/index',[GeneralController::class, 'products'])->name('genera
 ->missing(function(Request $request){
     return Redirect::route('messages.index');
  });
+
+
+ //Ruta productos
+ Route::get('general/products', [ProductController::class, 'index'])->name('general.index');
 
 
  //Rutas auth, profile
