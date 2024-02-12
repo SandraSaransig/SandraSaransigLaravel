@@ -1,23 +1,24 @@
 @extends('layout')
 
-@section('title','Politica de cookies')
+@section('title', 'Politica de cookies')
 
 @section('content')
-<h1 class="footer">Politica de cookies</h1>
-<span>
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat adipisci natus, animi suscipit iste corrupti accusamus aliquam exercitationem dolor sapiente laboriosam soluta dolores minima ex minus, architecto cumque labore nulla.
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat non vel ducimus qui ex? Error dicta, nostrum ipsa rerum praesentium ab nisi soluta excepturi modi. Laborum iste rem quidem non.
-</span>
-<br>
-<span>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas perspiciatis aliqignissimos magnam ullam distinctio ducimus!
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus eaque rem quisquam distinctio nam minima sint molestias est. Eaque nesciunt quibusdam laboriosam quis in adipisci non soluta sequi quaerat esse!
-</span>
-<br>
-<span>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, optio expedita? Magnam minus ipsa, deleniti tempore culpa, ea dicta porro, recusandae exercitationem cum fuga? Magnam porro commodi quos dolorum maxime.
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos commodi autem, in nisi quo qui doloremque soluta quae, ad fugiat dolore velit mollitia nam minus iste incidunt magnam quos?
-</span>
+    <h2 class="footer-title">Politica de cookies</h2>
+    <div class="info-footer">
+
+        <span>
+            Nuestro sitio web utiliza cookies para mejorar la experiencia del usuario y proporcionar información
+            personalizada. Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita
+            nuestro sitio. Utilizamos cookies para rastrear el uso del sitio, personalizar contenido y anuncios, y ofrecer
+            funciones sociales.
+
+            Al continuar navegando por nuestro sitio, usted acepta el uso de cookies de acuerdo con nuestra política. Puede
+            gestionar sus preferencias de cookies y obtener más información sobre cómo las utilizamos en nuestra página de
+            Política de Privacidad.
+
+            Le agradecemos por confiar en nosotros y por permitirnos mejorar continuamente nuestros servicios.
+        </span>
+
+    </div>
 
 @endsection

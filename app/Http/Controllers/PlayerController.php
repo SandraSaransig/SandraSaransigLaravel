@@ -16,7 +16,7 @@ class PlayerController extends Controller
     {
         //
         // $players = Player::where('visible',1)->paginate(6)
-        $players = Player::all();
+        $players = Player::orderBy('created_at', 'desc')->get();
         return view('players.index', compact('players'));
     }
 
@@ -52,6 +52,7 @@ class PlayerController extends Controller
 
     /**
      * Display the specified resource.
+     * $player = $request->file('balde')->storeAs('public', $player->id .'jpg');
      */
     public function show(Player $player)
     {
@@ -82,4 +83,19 @@ class PlayerController extends Controller
     {
         //
     }
+
+    //Metodo para establecer visible al jugador
+    public function visiblePlayer(Player $player){
+        $player->visible = 1;
+        $player->save();
+        return redirect()->route('players.index', compact('player'));
+    }
+
+    //Metodo para establecer invisible al jugador
+    public function invisiblePlayer(Player $player){
+        $player->visible = 0;
+        $player->save();
+        return redirect()->route('players.index', compact('player'));
+    }
+
 }

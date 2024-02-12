@@ -56,6 +56,13 @@ Route::resource('players', PlayerController::class)
 });
 
 
+//Ruta jugador visible
+Route::get('players/{player}/visible-player',[PlayerController::class,'visiblePlayer'])->name('visible-player');
+
+//Ruta jugador invisible
+Route::get('players/{player}/invisible-player',[PlayerController::class,'invisiblePlayer'])->name('invisible-player');
+
+
 //Ruta Donde estamos y Productos del nav
 Route::get('general/where',[GeneralController::class,'where'])->name('general.where');
 
@@ -88,3 +95,5 @@ Route::get('edit', function(){
     return view('profile.edit');
 })->name('profile.edit')
 ->middleware(('auth'));
+
+Route::post('update',[LoginController::class,'update'])->name('profile.update');

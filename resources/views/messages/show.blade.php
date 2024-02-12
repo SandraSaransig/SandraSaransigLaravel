@@ -13,6 +13,15 @@
 
     </div>
 
+@endsection
 
+@section('segment')
+{{--Delete Message--}}
+<form action="{{route('messages.destroy',['message'=>$message->id])}}" method="post">
 
+    @csrf
+    @method('delete')
+    <input type="submit" value="Eliminar mensaje">
+
+</form>
 @endsection

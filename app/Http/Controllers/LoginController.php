@@ -56,4 +56,15 @@ class LoginController extends Controller
         $request->session()->regenerateToken();
         return redirect()->route('index');
     }
+
+    public function update(Request $request, User $user){
+        $user->username= $request->get('username');
+        $user->name = $request->get('name');
+        $user->email = $request->get('email');
+        $user->password = $request->get('password');
+        $user->save();
+        return view('profile.show', compact('user'));
+
+
+    }
 }

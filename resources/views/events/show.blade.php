@@ -17,23 +17,31 @@
         <br>
         Etiquetas: {{$event->tags}}
     </div>
-    <div class="">
+    <div class="like-nolike">
+        @auth
         <a href="">Me gusta</a>
         <a href="">Borrar me gusta</a>
+
+        @endauth
     </div>
 
 @endsection
 
 @section('segment')
-{{-- Ruta editar evento --}}
-<a href="{{route('events.edit', ['event'=>$event->slug])}}">Editar evento</a>
-<br><br>
+@auth
+    @if (Auth::user()->isAdmin())
 
-{{-- Eliminar evento --}}
-<form action="{{route('events.destroy',['event'=>$event->slug])}}" method="post">
-@csrf
-@method('delete')
-<input type="submit" value="Eliminar Evento">
-</form>
+    {{-- Ruta editar evento --}}
+    <a href="{{route('events.edit', ['event'=>$event->slug])}}">Editar evento</a>
+    <br><br>
+
+    {{-- Eliminar evento --}}
+    <form action="{{route('events.destroy',['event'=>$event->slug])}}" method="post">
+    @csrf
+    @method('delete')
+    <input type="submit" value="Eliminar Evento">
+    </form>
+    @endif
+@endauth
 
 @endsection

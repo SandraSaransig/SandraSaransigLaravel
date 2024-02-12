@@ -1,28 +1,22 @@
 @extends('layout')
 
-@section('title','Mensajes')
+@section('title', 'Mensajes')
 
 @section('content')
-<h1>Mensajes</h1>
-@forelse ($messages as $menssage)
-    @if ($menssage->readed==0)
-        {{$menssage->name}}
-    @endif
 
-    <div class="mensaje">
-
-
-
-        <a href="{{route('messages.show', $menssage->id)}}">{{$menssage->name}}</a>
-
-
-    </div>
-
-@empty
-
-<p>No hay mensajes.</p>
-
-@endforelse
-
+    <h1>Mensajes</h1>
+    @foreach ($messages as $message)
+        <div class="messages">
+            @if (!$message->readed)
+                <span class="false-readed">
+                    <a href="{{ route('messages.show', $message->id) }}">{{ $message->name }}-{{$message->subject}}</a>
+                </span>
+            @else
+                <span class="true-readed">
+                    <a href="{{ route('messages.show', $message->id) }}">{{ $message->name }}-{{$message->subject}}</a>
+                </span>
+            @endif
+        </div>
+    @endforeach
 
 @endsection

@@ -13,7 +13,7 @@ class MessageController extends Controller
     public function index()
     {
         //
-        $messages = Message::where('readed',false)->orderBy('created_at','desc')->get();
+        $messages = Message::orderBy('created_at','desc')->get();
         return view('messages.index', compact('messages'));
     }
 
@@ -48,7 +48,7 @@ class MessageController extends Controller
     public function show(Message $message)
     {
         //controlar mensaje leido
-        $message = Message::findOrFail($message->id);
+        // $message = Message::findOrFail($message->id);
         $message->readed = true;
         $message->save();
 
@@ -76,6 +76,7 @@ class MessageController extends Controller
      */
     public function destroy(Message $message)
     {
-        //
+        $message->delete();
+        return redirect()->route('messages.index');
     }
 }

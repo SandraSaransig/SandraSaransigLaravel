@@ -1,26 +1,53 @@
 @extends('layout')
 
-@section('title','Términos y condiciones de uso')
+@section('title', 'Términos y condiciones de uso')
 
 @section('content')
-<h1 class="footer">Términos y condiciones</h1>
-<span>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ex adipisci quod quis inventore enim accusantium repellendus, velit alias consequatur beatae deserunt maxime, eius minima facilis impedit. Sapiente, delectus dolorem.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia suscipit est eos eius in. Ducimus voluptas expedita mollitia iste, reiciendis sequi tempore explicabo, repellendus consectetur, incidunt unde autem eligendi accusamus?
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit recusandae id ipsum voluptas quidem earum neque commodi facere, impedit sapiente aperiam quibusdam quam officia, laudantium consectetur maxime. Non, aut accusantium?
-</span>
-<br>
-<span>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nam, error vero eaque consectetur ducimus dolor deserunt eius perferendis, ut hic itaque a saepe doloremque atque odit quam accusantium! Officia!esse!
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptates beatae atque aperiam itaque facilis. Voluptatem odit consequatur sunt voluptatum earum repudiandae laboriosam facilis ad accusamus. Eligendi ratione architecto impedit.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam enim possimus omnis incidunt ab praesentium! A explicabo dolore facilis cupiditate esse, voluptatum deleniti incidunt nisi ab, ad officiis dolores. Repellat.
-</span>
-<br>
-<span>
-    Quod, optio expedita? Magnam minus ipsa, deleniti tempore culpa, ea dicta porro, recusandae exercitationem cum fuga? Magnam porro commodi quos dolorum maxime.
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dignissimos commodi autem, in nisi quo qui doloremque soluta quae, ad fugiat dolore velit mollitia nam minus iste incidunt magnam quos?
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, aperiam, maiores quam quia modi magnam unde repudiandae nesciunt accusantium provident corporis assumenda molestiae! Nostrum id, unde iure laboriosam sunt officiis.
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque est soluta ea? Facere incidunt earum, expedita ut aut laborum officiis dolor quae impedit exercitationem officia? Nam reiciendis ut odio perferendis!
-</span>
+    <h2 class="footer-title">Términos y condiciones</h2>
+    <div class="info-footer">
+
+        <span>
+
+            Bienvenido a nombre de Delta Rayo DoradoFC. Al acceder y utilizar nuestro sitio, usted acepta cumplir con los
+            siguientes términos y condiciones. Si no está de acuerdo con alguno de estos términos, le recomendamos que no
+            utilice nuestro sitio.
+
+            Uso Adecuado:
+
+            El contenido de este sitio es para su información general y uso personal. Nos reservamos el derecho de modificar
+            o
+            interrumpir cualquier aspecto del sitio sin previo aviso.
+
+            Propiedad Intelectual:
+
+            Todos los derechos de propiedad intelectual en este sitio son propiedad de [nombre del sitio web]. Está
+            permitido
+            ver y descargar material para uso personal, no comercial, sujeto a las restricciones establecidas en estos
+            términos
+            y condiciones.
+
+            Enlaces a Terceros:
+
+            Nuestro sitio puede contener enlaces a sitios web de terceros. No nos hacemos responsables por el contenido o
+            las
+            prácticas de privacidad de estos sitios.
+
+            Limitación de Responsabilidad:
+
+            Hacemos todo lo posible para garantizar la exactitud y actualidad de la información en nuestro sitio, pero no
+            ofrecemos garantías explícitas o implícitas sobre su integridad o idoneidad para un propósito particular.
+
+            Cambios en los Términos y Condiciones:
+
+            Nos reservamos el derecho de actualizar o modificar estos términos y condiciones en cualquier momento. Cualquier
+            cambio será efectivo al ser publicado en esta página.
+
+            Al utilizar nuestro sitio, usted acepta los términos y condiciones establecidos aquí. Si tiene alguna pregunta o
+            inquietud, por favor contáctenos.
+
+            Gracias por utilizar nombre de Delta Rayo DoradoFC.
+        </span>
+
+    </div>
 
 @endsection

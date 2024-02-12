@@ -9,9 +9,12 @@
             <ul>
                 <li>
                     <a href="{{route('events.show',$event->slug)}}">{{$event->name}}</a>
-                    <div>
+                    <div class="like-nolike">
+                        @auth
                         <a href="">Me gusta</a>
-                        <a href="">No me gusta</a>
+                        <a href="">Borrar me gusta</a>
+
+                        @endauth
                     </div>
                 </li>
             </ul>

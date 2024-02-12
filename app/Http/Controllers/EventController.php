@@ -6,6 +6,7 @@ use App\Models\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Http\Requests\EventRequest;
+use App\Http\Controllers\Auth;
 use App\Http\Requests\EditEventRequest;
 
 
@@ -103,4 +104,11 @@ class EventController extends Controller
     }
 
     //Crear funcion me gusta
+    // public function like(Event $event){
+    //     if(Auth::check()){
+    //         $user = Auth::user();
+    //         $user->events()->attach($event);
+    //         return redirect()->route('events.index');
+    //     }
+    // }
 }

@@ -54,6 +54,12 @@ footer h3 {
     margin: 10px 0;
 }
 
+.footer-title{
+    text-align: center;
+    font-size: 35px;
+    color: #000000;
+}
+
 /* Estilos para los enlaces dentro del footer */
 footer a {
     color: #fff;
@@ -96,6 +102,20 @@ h2{
     display: inline;
     color: #ecb730;
     font-size: 24px;
+}
+
+/*Estilos mensajes leidos y no leidos*/
+
+.false-readed a{
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(9, 129, 199);;
+}
+
+.true-readed a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #000000;
 }
 
 
