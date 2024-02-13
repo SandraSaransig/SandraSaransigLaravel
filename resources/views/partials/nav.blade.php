@@ -9,7 +9,7 @@
     <a href="{{ route('general.where') }}">Donde estamos</a>
 
     @auth
-        <a href="{{ route('profile.show') }}">Perfil</a>
+        <a href="{{ route('profile.index') }}">Perfil</a>
         <a href="{{ route('logout') }}">Salir</a>
 
         @if (auth()->user()->isAdmin())

@@ -4,7 +4,7 @@
 
 @section('content')
 @auth
-
+    <a href="{{route('profile.edit', $user)}}">Editar datos</a>
     <h3>Perfil {{Auth::user()->username}}</h3>
     <div class="info-user">
         Nombre:

@@ -8,6 +8,8 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserModelController;
 //Añadir para la solicitud HTTP y las redirecciones HTTP
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -90,10 +92,5 @@ Route::get('show', function(){
 })->name('profile.show')
 ->middleware('auth');
 
+Route::resource('profile/', ProfileController::class);
 
-Route::get('edit', function(){
-    return view('profile.edit');
-})->name('profile.edit')
-->middleware(('auth'));
-
-Route::post('update',[LoginController::class,'update'])->name('profile.update');
