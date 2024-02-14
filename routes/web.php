@@ -92,5 +92,9 @@ Route::get('show', function(){
 })->name('profile.show')
 ->middleware('auth');
 
-Route::resource('profile/', ProfileController::class);
+
+// Rutas perfil
+Route::resource('profile', ProfileController::class);
+
+
 

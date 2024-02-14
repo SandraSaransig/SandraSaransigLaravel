@@ -1,29 +1,54 @@
 @extends('layout')
+
+@section('style')
+<link rel="stylesheet" href="./styles/login.css">
+@endsection
+
 @section('title','Registro')
+
 @section('content')
-<form action="{{route('signup')}}" method="post">
-    @csrf
 
-    <label for="username">Nombre de usuario:</label><br>
-    <input type="text" name="username" id="username" value="{{old('username')}}"><br>
+<div class="container">
+    <div class="wrapper">
 
-    <label for="name">Nombre completo:</label><br>
-    <input type="text" name="name" id="name" value="{{old('name')}}"><br>
+        <form action="{{route('signup')}}" method="post">
+            @csrf
 
-    <label for="email">Email:</label><br>
-    <input type="text" name="email" id="email" value="{{old('email')}}"><br>
+            <h2 class="login">Registro</h2>
+            <div class="input-box">
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" name="username" id="username" value="{{old('username')}}">
+            </div>
 
-    <label for="birthday">Fecha de nacimiento:</label><br>
-    <input type="date" name="birthday" id="birthday"><br>
+            <div class="input-box">
+                <label for="name">Nombre completo:</label>
+                <input type="text" name="name" id="name" value="{{old('name')}}">
+            </div>
 
-    <label for="password">Contraseña:</label><br>
-    <input type="password" name="password" id="password"><br>
+            <div class="input-box">
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" value="{{old('email')}}">
+            </div>
 
-    <label for="password_confirmation">Repite la contraseña:</label><br>
-    <input type="password" name="password_confirmation" id="password_confirmation"><br>
+            <div class="input-box">
+                <label for="birthday">Fecha de nacimiento:</label>
+                <input type="date" name="birthday" id="birthday">
+            </div>
 
-    <input type="submit" value="Registrarse">
-</form>
+            <div class="input-box">
+                <label for="password">Contraseña:</label>
+                <input type="password" name="password" id="password">
+            </div>
+
+            <div class="input-box">
+                            <label for="password_confirmation">Repite la contraseña:</label>
+                            <input type="password" name="password_confirmation" id="password_confirmation">
+            </div>
+
+            <input type="submit" value="Registrarse" class="btn">
+        </form>
+    </div>
+</div>
 
 @if ($errors->any())
     <ul>

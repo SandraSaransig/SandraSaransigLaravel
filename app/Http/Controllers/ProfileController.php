@@ -10,10 +10,11 @@ class ProfileController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(User $user)
     {
         //
-        return view('profile.index');
+        $user = User::all();
+        return view('profile.index', compact('user'));
     }
 
     /**
@@ -39,7 +40,6 @@ class ProfileController extends Controller
     {
         //
         return view('profile.show', compact('user'));
-
     }
 
     /**

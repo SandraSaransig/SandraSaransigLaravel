@@ -6,19 +6,22 @@
 <h2>Editar perfil</h2>
 
 <div class="form-profile">
-    <form action="{{route('profile.update', $user)}}" method="post">
+    <form action="{{route('profile.update', ['user'])}}" method="post">
 
         @csrf
         @method('put')
 
-        <label for="">Nombre de usuario:</label> {{$user->username}}
+        <label for="username">Nombre de usuario:</label>
+        <span>
+           {{$user->username}}
+        </span>
         <br>
 
         <label for="name">Nombre:</label><br>
-        <input type="text" name="name" value="{{old('name')}}">
+        <input type="text" name="name" value="{{$user->name}}">
         <br>
 
-        <label for="">Email:</label> {{$user->email}}
+        <label for="email">Email:</label> {{$user->email}}
         <br>
 
         <label for="birthday">Fecha de nacimiento:</label>

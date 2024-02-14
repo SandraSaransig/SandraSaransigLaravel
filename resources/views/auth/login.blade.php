@@ -1,9 +1,12 @@
 @extends('layout')
+
 @section('style')
 <link rel="stylesheet" href="./styles/login.css">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 @endsection
+
 @section('title','Login')
+
 @section('content')
 <div class="container">
 
