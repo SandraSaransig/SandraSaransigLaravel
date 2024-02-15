@@ -102,6 +102,7 @@ h2{
     display: inline;
     color: #ecb730;
     font-size: 24px;
+    text-align: center;
 }
 
 /*Estilos mensajes leidos y no leidos*/
@@ -119,4 +120,8 @@ h2{
 }
 
 
+.map{
+    margin: auto;
+    padding: auto;
 
+}

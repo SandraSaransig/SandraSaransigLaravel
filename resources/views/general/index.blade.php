@@ -7,7 +7,7 @@
 @section('title', 'Productos')
 
 @section('content')
-    <h3>Productos</h3>
+    <h2>Productos</h2>
     <div class="product-container">
         @forelse ($products as $product)
             <div class="product">

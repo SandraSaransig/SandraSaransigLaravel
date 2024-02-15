@@ -16,7 +16,7 @@ body{
 
 .product{
     padding: 50px 50px;
-    width: 18%;
+    width: 30%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
 }
@@ -27,13 +27,13 @@ body{
     padding: 20px;
     perspective: 1000px;
 
+
 }
 
 .card2{
     margin-top: 20px;
     padding-top: 50px;
     transform-style: preserve-3d;
-    background-image: url();
     background-position: center center;
     width: 100%;
     transition: all 0.5s ease-in-out;
@@ -50,7 +50,7 @@ body{
     height: 100%;
     width: 100%;
     background-color: cadetblue;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
     box-shadow: royalblue 0px 20px 50px -25px;
     transition: all 05.s ease-in-out;
     padding:  50px 25px 25px 25px;
