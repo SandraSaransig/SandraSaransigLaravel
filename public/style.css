@@ -15,14 +15,14 @@ h1{
     text-align: center;
 }
 
-.storm{
+/* .storm{
     background-image: url(images/yellow.gif);
     background-size: cover;
     background-position: center;
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-}
+} */
 
 .divImg{
     display: flex;
@@ -35,6 +35,10 @@ h1{
     margin-top: 10px;
     max-width: 100%;
     opacity: 0.7;
+}
+
+.index{
+    margin-bottom: auto;
 }
 
 /*Estilos footer*/
@@ -119,9 +123,135 @@ h2{
     color: #000000;
 }
 
-
+/* Centrar mapa ¿donde estamos? */
 .map{
     margin: auto;
     padding: auto;
 
+}
+
+
+/* Organizar lista eventos estilo */
+.evento {
+    margin: 20px;
+    padding: 20px;
+    margin-bottom: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-future,
+.event-past {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.event-a {
+    color: #4285f4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.like-nolike a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.like-nolike a:hover {
+    color: #ff8c00;
+    text-decoration: none;
+}
+
+.event-past {
+    color: #000000;
+}
+
+.event-past a {
+    color: #000000;
+    font-weight: normal;
+}
+
+/* Editar evento, centrar formulario */
+form {
+    max-width: 400px; /* Establece el ancho máximo del formulario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+
+label {
+    display: block; /* Coloca cada etiqueta en una nueva línea */
+    margin-bottom: 5px; /* Espacio entre las etiquetas y los campos de entrada */
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+}
+
+input[type="checkbox"] {
+    width: auto; /* Ancho automático para los checkboxes */
+}
+
+input[type="submit"] {
+    background-color: #4285f4;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background-color: #3c74d0;
+}
+
+
+/* arreglo footer de los enlaces del nav */
+.form-contact{
+    margin-bottom: auto;
+}
+
+.user{
+    margin-bottom: auto;
+}
+
+.info-footer{
+    margin-bottom: auto;
+}
+
+.messages{
+    margin-bottom: auto;
+}
+
+.player{
+    margin-bottom: auto;
+}
+
+.user-container {
+    margin-bottom: auto;
+}
+
+.list-user {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.list-user span {
+    font-weight: bold;
 }

@@ -8,28 +8,28 @@
 @endsection
 
 @section('segment')
-    <span>
-        ¡Bienvenido a Delta Rayo DoradoFC!
-    </span>
+    <div class="index">
 
-    <br>
-    <span>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Sed inventore in repudiandae, iste, soluta incidunt nulla delectus praesentium debitis rem pariatur
-        cupiditate doloribus beatae eveniet, sint temporibus esse recusandae et?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Consectetur dolorem necessitatibus harum autem doloribus iusto aperiam repellendus nesciunt?
-        Soluta placeat rem ab optio dolorum? Dolores quaerat voluptates excepturi accusamus saepe!
+        <span>
+            ¡Bienvenidos a la página oficial del equipo "Delta Rayo Dorado FC"!
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Porro hic deleniti nesciunt fuga magni molestiae ipsa eaque necessitatibus optio officia.
-        Providen eum non magnam animi, ad fugit adipisci? Expedita, minima!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Sumérgete en el apasionante mundo del fútbol con nosotros.
+            En esta plataforma, te ofrecemos una ventana única para explorar la emocionante travesía de nuestro equipo:
+            un conjunto dedicado de talentosos jugadores que encarnan la pasión,
+            la perseverancia y el espíritu deportivo.
 
-    </span>
-    <br>
-    <span>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    </span>
+            "Delta Rayo Dorado FC" no es solo un equipo, es una familia unida por el amor al juego.
+            A través de esta página, te invitamos a conocer más sobre nuestros jugadores estrella,
+            explorar momentos inolvidables de partidos pasados y mantenerte al día con las últimas noticias y
+            eventos relacionados con nuestro equipo.
+
+            Desde los vibrantes partidos en casa hasta las competiciones más desafiantes,
+            cada página de esta web refleja el compromiso del "Delta Rayo Dorado FC" con la excelencia y
+            la entrega inquebrantable en el campo de juego. Únete a nosotros para celebrar cada victoria,
+            superar desafíos y compartir la emoción que solo el fútbol puede brindar.
+
+            ¡Prepárate para vivir la pasión del fútbol con "Delta Rayo Dorado FC"!
+
+        </span>
+    </div>
 @endsection

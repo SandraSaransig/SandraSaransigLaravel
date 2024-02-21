@@ -59,6 +59,9 @@ Route::resource('players', PlayerController::class)
     return Redirect::route('players.index');
 });
 
+//Visible- no visible
+Route::put('players/{player}/visible', [PlayerController::class,'visiblePlayer'])->name('players.visible');
+Route::put('players/{player}/invisible', [PlayerController::class,'invisiblePlayer'])->name('players.invisible');
 
 //Ruta Donde estamos nav
 Route::get('general/where',[GeneralController::class,'where'])->name('general.where');

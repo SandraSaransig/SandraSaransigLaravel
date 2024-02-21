@@ -3,7 +3,7 @@
 
 @section('content')
     <h2 class="title">Información: {{$player->name}}</h2>
-    <div>
+    <div class="player">
         Twitter: {{$player->twitter}}
         <br>
         Instagram: {{$player->instagram}}
