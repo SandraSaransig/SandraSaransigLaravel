@@ -32,7 +32,7 @@
             @auth
                 @if (Auth::check() && Auth::user()->rol === 'admin')
                     <div class="list-admin">
-                        <a href="{{ route('players.show', $player->slug) }}">{{ $player->name }}</a>
+                        <a href="{{ route('players.show', $player->slug) }}">{{ $player->name }}</a><br>
                         <img src="" alt="Imagen Jugador">
                         <br>
                         <a href="{{ route('players.visible', $player) }}">Visible</a>
