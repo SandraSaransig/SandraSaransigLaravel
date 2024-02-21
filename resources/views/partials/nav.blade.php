@@ -11,7 +11,7 @@
     @auth
         {{-- Aparecera estas opciones cuando el usuario este logueado --}}
         {{-- Añadir el usuario, para si mostrar su informacion --}}
-        {{-- <a href="{{ route('profile.show') }}">Perfil</a> --}}
+        <a href="{{ route('profile.show', Auth::user()->id) }}">Perfil</a>
         <a href="{{ route('logout') }}">Salir</a>
 
         {{-- Aparecera estas opciones cuando el usuario sea admin --}}

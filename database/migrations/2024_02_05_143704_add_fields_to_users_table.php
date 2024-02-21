@@ -9,11 +9,13 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+
+     //Migracion para añadir el nombre de usuario, fehc ade nacimiento y rol a la tabla de usuarios
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
             //
-            $table->string('username')->after('id');
+            $table->string('username')->after('id')->unique();
             $table->date('birthday');
             $table->enum('rol',['user','admin'])
                 ->default('user')

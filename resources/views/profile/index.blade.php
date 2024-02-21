@@ -4,22 +4,17 @@
 
 @section('content')
 @auth
-    <a href="{{route('profile.edit', $user)}}">Editar datos</a>
-    <h3>Perfil {{Auth::user()->username}}</h3>
-    <div class="info-user">
-        Nombre:
-        {{Auth::user()->name}}
-        <br>
-        Correo:
-        {{Auth::user()->email}}
-        <br>
-        Fecha de nacimiento:
-        {{Auth::user()->birthday}}
-        <br>
-    </div>
 
-    @else
-    <a href="{{route('login')}}">Login</a>
+    <h3>Perfil {{Auth::user()->username}}</h3>
+    @forelse ($user as $userList)
+        <div class="list-user">
+            <span>
+                Nombre de usuario: {{$userList->username}}
+            </span>
+        </div>
+    @empty
+        <h3>No hay usuarios registrados</h3>
+    @endforelse
 
 @endauth
 @endsection

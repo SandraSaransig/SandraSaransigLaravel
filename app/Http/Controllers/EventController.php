@@ -104,11 +104,16 @@ class EventController extends Controller
     }
 
     //Crear funcion me gusta
-    // public function like(Event $event){
-    //     if(Auth::check()){
-    //         $user = Auth::user();
-    //         $user->events()->attach($event);
-    //         return redirect()->route('events.index');
-    //     }
-    // }
+     public function userlike(Request $request, Event $event){
+        $event = Event::findOrFail($event->id);
+
+        $user = auth()->id();
+        if(!$event->users()->where('user_id', $user)->exists()){
+            $event->users()->attach($user);
+            return redirect()->back();
+        }
+
+        return redirect()->route('events.index');
+
+    }
 }

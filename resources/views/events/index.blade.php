@@ -10,8 +10,10 @@
                 <li>
                     <a href="{{route('events.show',$event->slug)}}">{{$event->name}}</a>
                     <div class="like-nolike">
+                        {{-- Si el usuario esta logueado puede dar like o quitarlo --}}
                         @auth
-                        <a href="">Me gusta</a>
+
+                        <a href="{{route('event.like', $event->id)}}">Me gusta</a>
                         <a href="">Borrar me gusta</a>
 
                         @endauth

@@ -1,25 +1,27 @@
 @extends('layout')
 
-@section('title','Perfil')
+@section('title', 'Perfil')
 
 @section('content')
-@auth
+    <h3>Perfil {{ Auth::user()->username }}</h3>
+    @auth
 
-    <h3>Perfil {{Auth::user()->username}}</h3>
-    <div class="info-user">
-        Nombre:
-        {{Auth::user()->name}}
+        <div class="info-user">
+            Nombre:
+            {{ Auth::user()->name }}
+            <br>
+            Correo:
+            {{ Auth::user()->email }}
+            <br>
+            Fecha de nacimiento:
+            {{ Auth::user()->birthday }}
+            <br>
+        </div>
         <br>
-        Correo:
-        {{Auth::user()->email}}
-        <br>
-        Fecha de nacimiento:
-        {{Auth::user()->birthday}}
-        <br>
-    </div>
 
-    @else
-    <a href="{{route('login')}}">Login</a>
+        {{-- Dirige al usuario a la pagina para editar el perfil --}}
+        <a href="{{ route('profile.edit', Auth::user()->id) }}">Editar datos</a>
 
-@endauth
+
+    @endauth
 @endsection

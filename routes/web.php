@@ -9,7 +9,6 @@ use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\UserModelController;
 //Añadir para la solicitud HTTP y las redirecciones HTTP
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -50,6 +49,9 @@ Route::resource('events', EventController::class)
     return Redirect::route('events.index');
 });
 
+//Dar me gusta o quitar me gusta al evento
+Route::get('event/{event}/like', [EventController::class, 'userlike'])->name('event.like');
+
 //Ruta de Jugadores
 Route::resource('players', PlayerController::class)
 ->parameters(['player'=>'slug'])
@@ -58,24 +60,19 @@ Route::resource('players', PlayerController::class)
 });
 
 
-//Ruta jugador visible
-Route::get('players/{player}/visible-player',[PlayerController::class,'visiblePlayer'])->name('visible-player');
-
-//Ruta jugador invisible
-Route::get('players/{player}/invisible-player',[PlayerController::class,'invisiblePlayer'])->name('invisible-player');
-
-
-//Ruta Donde estamos y Productos del nav
+//Ruta Donde estamos nav
 Route::get('general/where',[GeneralController::class,'where'])->name('general.where');
 
+//Ruta tienda productos
+Route::get('/products',[ProductController::class, 'index'])->name('general.index');
 
 
-//Ruta Mensajes
- Route::resource('messages', MessageController::class);
-
-
- //Ruta productos
- Route::get('general/products', [ProductController::class, 'index'])->name('general.index');
+//Ruta Mensajes Contacto
+ Route::resource('messages', MessageController::class)
+ ->parameters(['message'=>'slug'])
+->missing(function(Request $request){
+    return Redirect::route('messages.message');
+ });
 
 
  //Rutas auth, profile
@@ -87,14 +84,8 @@ Route::post('login',[LoginController::class,'login'])->name('login');
 
 Route::get('logout',[LoginController::class,'logout'])->name('logout');
 
-Route::get('show', function(){
-    return view('profile.show');
-})->name('profile.show')
-->middleware('auth');
+//Ruta perfil
+Route::resource('profile', ProfileController::class)->except(['index']);
 
-
-// Rutas perfil
-Route::resource('profile', ProfileController::class);
-
-
-
+//Ruta index admin
+Route::get('user',[ProfileController::class, 'index'])->name('profile.index');

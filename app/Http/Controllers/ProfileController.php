@@ -10,10 +10,10 @@ class ProfileController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(User $user)
+    public function index()
     {
         //
-        $user = User::all();
+        $user = User::orderby('created_at', 'desc')->get();
         return view('profile.index', compact('user'));
     }
 
@@ -61,6 +61,7 @@ class ProfileController extends Controller
         $user->birthday = $request->get('birthday');
 
         $user->save();
+
         return view('profile.show', compact('user'));
     }
 

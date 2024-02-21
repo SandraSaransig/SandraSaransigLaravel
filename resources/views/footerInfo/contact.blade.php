@@ -4,7 +4,7 @@
 
 @section('content')
     <h1 class="title">Contacto</h1>
-    {{-- Crear formulario, leer la hooja --}}
+    {{-- Formulario enviar mensaje --}}
     <div class="form-contact">
 
         <form action="{{ route('messages.store') }}" method="post">

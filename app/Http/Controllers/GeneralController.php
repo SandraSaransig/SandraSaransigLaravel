@@ -11,5 +11,4 @@ class GeneralController extends Controller
         return view('general.where');
     }
 
-
 }
