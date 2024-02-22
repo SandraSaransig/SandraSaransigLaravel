@@ -34,7 +34,7 @@
                             <div class="like-nolike">
                                 {{-- Si el usuario esta logueado puede dar like o quitarlo --}}
                                 @auth
-
+                                    {{-- La opcion de dar me gusta o no si el usuario esta loguado NO funciona --}}
                                     <a href="{{ route('event.like', $event->id) }}" class="event-a">Me gusta</a>
                                     <a href="" class="event-a">Borrar me gusta</a>
 

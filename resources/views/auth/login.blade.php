@@ -10,6 +10,7 @@
 @section('content')
 <div class="container">
 
+    {{-- Fromulario para acceder --}}
     <div class="wrapper">
         <form action="{{route('login')}}" method="post">
             @csrf

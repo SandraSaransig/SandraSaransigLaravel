@@ -1,3 +1,5 @@
+{{-- partial para el heder donde esta el menu de navegacion, el logo y el nombre --}}
+
 <img src="/images/logo.png" alt="logo del equipo" class="logoNav">
 <h2>Delta Rayo DoradoFC</h2>
 <nav>

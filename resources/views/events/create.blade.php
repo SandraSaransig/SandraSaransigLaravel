@@ -5,7 +5,7 @@
 @section('content')
     <h2>Añadir Evento</h2>
     <div class="evento">
-
+        {{-- Formulario para crear un nuevo evento, aparecera si es admin --}}
 
         <form action="{{ route('events.store') }}" method="post">
             @csrf

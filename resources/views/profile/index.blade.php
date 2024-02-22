@@ -4,7 +4,7 @@
 
 @section('content')
     @auth
-
+    {{-- Lista de usuarios que aparecera al admin, en la opcion de cuentas puede ver los usuarios registrdos --}}
         <h3>Perfil {{ Auth::user()->username }}</h3>
         <div class="user-container">
 

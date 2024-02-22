@@ -5,7 +5,7 @@
 @section('content')
     <h2 class="footer-title">Términos y condiciones</h2>
     <div class="info-footer">
-
+        {{-- Vista de Términos y condiciones --}}
         <span>
 
             Bienvenido a nombre de Delta Rayo DoradoFC. Al acceder y utilizar nuestro sitio, usted acepta cumplir con los

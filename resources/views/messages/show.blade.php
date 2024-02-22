@@ -1,14 +1,17 @@
 @extends('layout')
+
 @section('title', 'Información mensaje')
+
 @section('content')
+{{-- Vista para mostrar la información del mensaje --}}
     <h2>Información: </h2>
 
     <div>
-        {{$message->name}}
+        {{ $message->name }}
         <br>
-        {{$message->subject}}
+        {{ $message->subject }}
         <br>
-        {{$message->text}}
+        {{ $message->text }}
         <br>
 
     </div>
@@ -16,12 +19,12 @@
 @endsection
 
 @section('segment')
-{{--Delete Message--}}
-<form action="{{route('messages.destroy',['message'=>$message->id])}}" method="post">
+    {{-- Delete Message --}}
+    <form action="{{ route('messages.destroy', ['message' => $message->id]) }}" method="post">
 
-    @csrf
-    @method('delete')
-    <input type="submit" value="Eliminar mensaje">
+        @csrf
+        @method('delete')
+        <input type="submit" value="Eliminar mensaje">
 
-</form>
+    </form>
 @endsection

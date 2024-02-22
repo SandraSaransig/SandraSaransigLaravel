@@ -3,6 +3,7 @@
 @section('title', 'Añadir Jugador')
 
 @section('content')
+{{-- Vista con el formulario para añadir el jugador, solo aparecera si el usuario es admin --}}
     <h2>Añadir Jugador</h2>
 
     <div class="player">

@@ -5,6 +5,7 @@
 @section('content')
     <h2 class="footer-title">Politica de cookies</h2>
     <div class="info-footer">
+        {{-- Vista Politica de cookies --}}
 
         <span>
             Nuestro sitio web utiliza cookies para mejorar la experiencia del usuario y proporcionar información

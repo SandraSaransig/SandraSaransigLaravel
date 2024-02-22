@@ -5,6 +5,7 @@
 @section('content')
     <h2 class="footer-title">Politica de privacidad</h2>
     <div class="info-footer">
+        {{-- Vista de Politica de privacidad --}}
 
         <span>
             En nombre de Delta Rayo DoradoFC, su privacidad es de suma importancia para nosotros.

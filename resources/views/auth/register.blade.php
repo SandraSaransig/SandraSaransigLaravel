@@ -8,6 +8,7 @@
 
 @section('content')
 
+{{-- Formulario de registro --}}
 <div class="container">
     <div class="wrapper">
 

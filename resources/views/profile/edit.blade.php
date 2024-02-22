@@ -5,7 +5,7 @@
 @section('content')
 <h2>Editar perfil</h2>
 
-{{-- Editar los campos de nombre y cumpleaños --}}
+{{-- Editar los campos de nombre y cumpleaños del usuario registrado--}}
 
 <div class="form-profile">
     <form action="{{route('profile.update', ['user'])}}" method="post">

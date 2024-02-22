@@ -6,6 +6,8 @@
     <h2>Edición del evento: {{ $event->name }}</h2>
     <div class="evento">
 
+        {{-- Formulario para editar el evento solo si es admin aparecera --}}
+
         <form action="{{ route('events.update', $event) }}" method="post">
             @csrf
             @method('put')
